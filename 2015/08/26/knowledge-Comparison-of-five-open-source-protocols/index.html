@@ -1,0 +1,398 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Knowledge: Comparison of five open source protocols | 五种开源协议的比较 | Nyx&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="LSR">
+    
+    <meta name="description" content="转载自：http://www.awflasher.com/blog/archives/939
+
+最初来自：sinoprise.com/read.php?tid-662-page-e-fpage-1.html（遗憾的是这个链接已经打不开了），我基本未改动，只是进行了一些排版和整理。参考文献：http:">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="Nyx&#39;s Blog" title="Nyx&#39;s Blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Nyx&#39;s Blog">Nyx&#39;s Blog</a></h1>
+				<h2 class="blog-motto">人生没有运动和读书解决不了的问题</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">主页|Home</a></li>
+					
+						<li><a href="/archives">归档|Archives</a></li>
+					
+						<li><a href="/tags">标签|Tags</a></li>
+					
+						<li><a href="/categories">分类|Categories</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:nyx2014.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/08/26/knowledge-Comparison-of-five-open-source-protocols/" title="Knowledge: Comparison of five open source protocols | 五种开源协议的比较" itemprop="url">Knowledge: Comparison of five open source protocols | 五种开源协议的比较</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="https://nyx2014.github.io" title="LSR">LSR</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2015-08-26T14:46:33.000Z" itemprop="datePublished">2015-08-26</time>
+    更新日期:<time datetime="2015-08-26T15:27:06.000Z" itemprop="dateModified">2015-08-26</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#BSD开源协议（original_BSD_license、FreeBSD_license、Original_BSD_license）"><span class="toc-number">1.</span> <span class="toc-text">BSD开源协议（original BSD license、FreeBSD license、Original BSD license）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Apache_Licence_2-0（Apache_License,_Version_2-0、Apache_License,_Version_1-1、Apache_License,_Version_1-0）"><span class="toc-number">2.</span> <span class="toc-text">Apache Licence 2.0（Apache License, Version 2.0、Apache License, Version 1.1、Apache License, Version 1.0）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GPL（GNU_General_Public_License）"><span class="toc-number">3.</span> <span class="toc-text">GPL（GNU General Public License）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LGPL（GNU_Lesser_General_Public_License）"><span class="toc-number">4.</span> <span class="toc-text">LGPL（GNU Lesser General Public License）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MIT（MIT）"><span class="toc-number">5.</span> <span class="toc-text">MIT（MIT）</span></a></li></ol>
+		</div>
+		
+		<blockquote>
+<p>转载自：<a href="http://www.awflasher.com/blog/archives/939" target="_blank" rel="external">http://www.awflasher.com/blog/archives/939</a></p>
+</blockquote>
+<p>最初来自：sinoprise.com/read.php?tid-662-page-e-fpage-1.html（遗憾的是这个链接已经打不开了），我基本未改动，只是进行了一些排版和整理。<br>参考文献：<a href="http://www.fsf.org/licensing/licenses/" target="_blank" rel="external">http://www.fsf.org/licensing/licenses/</a></p>
+<p>现今存在的开源协议很多，而经过Open Source Initiative组织通过批准的开源协议目前有58种（<a href="http://www.opensource.org/licenses/alphabetical）。我们在常见的开源协议如BSD" target="_blank" rel="external">http://www.opensource.org/licenses/alphabetical）。我们在常见的开源协议如BSD</a>, GPL, LGPL,MIT等都是OSI批准的协议。如果要开源自己的代码，最好也是选择这些被批准的开源协议。</p>
+<h3 id="BSD开源协议（original_BSD_license、FreeBSD_license、Original_BSD_license）">BSD开源协议（original BSD license、FreeBSD license、Original BSD license）</h3><p>BSD开源协议是一个给于使用者很大自由的协议。基本上使用者可以”为所欲为”,可以自由的使用，修改源代码，也可以将修改后的代码作为开源或者专有软件再发布。</p>
+<p>但”为所欲为”的前提当你发布使用了BSD协议的代码，或则以BSD协议代码为基础做二次开发自己的产品时，需要满足三个条件：</p>
+<ol>
+<li>如果再发布的产品中包含源代码，则在源代码中必须带有原来代码中的BSD协议。</li>
+<li>如果再发布的只是二进制类库/软件，则需要在类库/软件的文档和版权声明中包含原来代码中的BSD协议。</li>
+<li>不可以用开源代码的作者/机构名字和原来产品的名字做市场推广。</li>
+</ol>
+<p>BSD 代码鼓励代码共享，但需要尊重代码作者的著作权。BSD由于允许使用者修改和重新发布代码，也允许使用或在BSD代码上开发商业软件发布和销售，因此是对商业集成很友好的协议。而很多的公司企业在选用开源产品的时候都首选BSD协议，因为可以完全控制这些第三方的代码，在必要的时候可以修改或者二次开发。</p>
+<h3 id="Apache_Licence_2-0（Apache_License,_Version_2-0、Apache_License,_Version_1-1、Apache_License,_Version_1-0）">Apache Licence 2.0（Apache License, Version 2.0、Apache License, Version 1.1、Apache License, Version 1.0）</h3><p>Apache Licence是著名的非盈利开源组织Apache采用的协议。该协议和BSD类似，同样鼓励代码共享和尊重原作者的著作权，同样允许代码修改，再发布（作为开源或商业软件）。需要满足的条件也和BSD类似：</p>
+<ol>
+<li>需要给代码的用户一份Apache Licence</li>
+<li>如果你修改了代码，需要再被修改的文件中说明。</li>
+<li>在延伸的代码中（修改和有源代码衍生的代码中）需要带有原来代码中的协议，商标，专利声明和其他原来作者规定需要包含的说明。</li>
+<li>如果再发布的产品中包含一个Notice文件，则在Notice文件中需要带有Apache Licence。你可以在Notice中增加自己的许可，但不可以表现为对Apache Licence构成更改。</li>
+</ol>
+<p>Apache Licence也是对商业应用友好的许可。使用者也可以在需要的时候修改代码来满足需要并作为开源或商业产品发布/销售。</p>
+<h3 id="GPL（GNU_General_Public_License）">GPL（GNU General Public License）</h3><p>我们很熟悉的Linux就是采用了GPL。GPL协议和BSD, Apache Licence等鼓励代码重用的许可很不一样。GPL的出发点是代码的开源/免费使用和引用/修改/衍生代码的开源/免费使用，但不允许修改后和衍生的代码做为闭源的商业软件发布和销售。这也就是为什么我们能用免费的各种linux，包括商业公司的linux和linux上各种各样的由个人，组织，以及商业软件公司开发的免费软件了。</p>
+<p>GPL协议的主要内容是只要在一个软件中使用(“使用”指类库引用，修改后的代码或者衍生代码)GPL 协议的产品，则该软件产品必须也采用GPL协议，既必须也是开源和免费。这就是所谓的”传染性”。GPL协议的产品作为一个单独的产品使用没有任何问题，还可以享受免费的优势。</p>
+<p>由于GPL严格要求使用了GPL类库的软件产品必须使用GPL协议，对于使用GPL协议的开源代码，商业软件或者对代码有保密要求的部门就不适合集成/采用作为类库和二次开发的基础。</p>
+<p>其它细节如再发布的时候需要伴随GPL协议等和BSD/Apache等类似。</p>
+<h3 id="LGPL（GNU_Lesser_General_Public_License）">LGPL（GNU Lesser General Public License）</h3><p>LGPL是GPL的一个为主要为类库使用设计的开源协议。和GPL要求任何使用/修改/衍生之GPL类库的的软件必须采用GPL协议不同。LGPL允许商业软件通过类库引用(link)方式使用LGPL类库而不需要开源商业软件的代码。这使得采用LGPL协议的开源代码可以被商业软件作为类库引用并发布和销售。</p>
+<p>但是如果修改LGPL协议的代码或者衍生，则所有修改的代码，涉及修改部分的额外代码和衍生的代码都必须采用LGPL协议。因此LGPL协议的开源代码很适合作为第三方类库被商业软件引用，但不适合希望以LGPL协议代码为基础，通过修改和衍生的方式做二次开发的商业软件采用。</p>
+<p>GPL/LGPL都保障原作者的知识产权，避免有人利用开源代码复制并开发类似的产品</p>
+<h3 id="MIT（MIT）">MIT（MIT）</h3><p>MIT是和BSD一样宽范的许可协议,作者只想保留版权,而无任何其他了限制.也就是说,你必须在你的发行版里包含原许可协议的声明,无论你是以二进制发布的还是以源代码发布的.</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Apache/">Apache</a><a href="/tags/BSD/">BSD</a><a href="/tags/GPL/">GPL</a><a href="/tags/LGPL/">LGPL</a><a href="/tags/Licence/">Licence</a><a href="/tags/MIT/">MIT</a><a href="/tags/OpenSource/">OpenSource</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/转载/">转载</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="https://nyx2014.github.io/2015/08/26/knowledge-Comparison-of-five-open-source-protocols/" data-title="Knowledge: Comparison of five open source protocols | 五种开源协议的比较 | Nyx&#39;s Blog" data-tsina="undefined" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/08/26/tutorial-Build-YOUR-Blog/"  title="Tutorial: Build YOUR own Blog | 搭建一个属于自己的博客">
+ <strong>NEXT:</strong><br/> 
+ <span>Tutorial: Build YOUR own Blog | 搭建一个属于自己的博客
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#BSD开源协议（original_BSD_license、FreeBSD_license、Original_BSD_license）"><span class="toc-number">1.</span> <span class="toc-text">BSD开源协议（original BSD license、FreeBSD license、Original BSD license）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Apache_Licence_2-0（Apache_License,_Version_2-0、Apache_License,_Version_1-1、Apache_License,_Version_1-0）"><span class="toc-number">2.</span> <span class="toc-text">Apache Licence 2.0（Apache License, Version 2.0、Apache License, Version 1.1、Apache License, Version 1.0）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GPL（GNU_General_Public_License）"><span class="toc-number">3.</span> <span class="toc-text">GPL（GNU General Public License）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LGPL（GNU_Lesser_General_Public_License）"><span class="toc-number">4.</span> <span class="toc-text">LGPL（GNU Lesser General Public License）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MIT（MIT）"><span class="toc-number">5.</span> <span class="toc-text">MIT（MIT）</span></a></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+			<li><a href="/categories/创意/" title="创意">创意<sup>1</sup></a></li>
+		
+			<li><a href="/categories/技巧/" title="技巧">技巧<sup>1</sup></a></li>
+		
+			<li><a href="/categories/教程/" title="教程">教程<sup>1</sup></a></li>
+		
+			<li><a href="/categories/转载/" title="转载">转载<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/Apache/" title="Apache">Apache<sup>1</sup></a></li>
+		
+			<li><a href="/tags/BSD/" title="BSD">BSD<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Blog/" title="Blog">Blog<sup>1</sup></a></li>
+		
+			<li><a href="/tags/File-System/" title="File System">File System<sup>1</sup></a></li>
+		
+			<li><a href="/tags/GPL/" title="GPL">GPL<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Git/" title="Git">Git<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Github/" title="Github">Github<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>1</sup></a></li>
+		
+			<li><a href="/tags/LGPL/" title="LGPL">LGPL<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Licence/" title="Licence">Licence<sup>1</sup></a></li>
+		
+			<li><a href="/tags/MIT/" title="MIT">MIT<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>1</sup></a></li>
+		
+			<li><a href="/tags/OpenSource/" title="OpenSource">OpenSource<sup>1</sup></a></li>
+		
+			<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+  <div class="archiveslist">
+    <p class="asidetitle"><a href="/archives">归档</a></p>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">4</span></li></ul>
+  </div>
+
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">标签云</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/Apache/" style="font-size: NaNpx;">Apache</a><a href="/tags/BSD/" style="font-size: NaNpx;">BSD</a><a href="/tags/Blog/" style="font-size: NaNpx;">Blog</a><a href="/tags/File-System/" style="font-size: NaNpx;">File System</a><a href="/tags/GPL/" style="font-size: NaNpx;">GPL</a><a href="/tags/Git/" style="font-size: NaNpx;">Git</a><a href="/tags/Github/" style="font-size: NaNpx;">Github</a><a href="/tags/Hexo/" style="font-size: NaNpx;">Hexo</a><a href="/tags/LGPL/" style="font-size: NaNpx;">LGPL</a><a href="/tags/Licence/" style="font-size: NaNpx;">Licence</a><a href="/tags/MIT/" style="font-size: NaNpx;">MIT</a><a href="/tags/Markdown/" style="font-size: NaNpx;">Markdown</a><a href="/tags/OpenSource/" style="font-size: NaNpx;">OpenSource</a><a href="/tags/git/" style="font-size: NaNpx;">git</a>
+    </div>
+  </div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+      <li><a href="https://idiotwu.me/" target="_blank" title="idiotWu">Dolphin Wood's Blog</a></li>
+    </ul>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hi ,I&#39;m Li Sirui form BUCT. <br/>
+			This is my blog, welcome everyone.</p>
+	</section>
+	 
+	<div class="social-font clearfix">
+		
+		<a href="https://github.com/nyx2014" target="_blank" title="github"></a>
+		
+		<a href="http://stackoverflow.com/users/5151091/nyx2013" target="_blank" title="stackoverflow"></a>
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
+		
+		<a href="https://nyx2014.github.io" target="_blank" title="LSR">LSR</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title')
+  var html = [
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  ].join('');
+  $this.append(html);
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"nyx2014"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+  </body>
+</html>

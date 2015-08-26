@@ -4,19 +4,12 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Git使用技巧：repositories的迁移 | Nyx&#39;s Blog</title>
+    <title>Tutorial: Build YOUR own Blog | 搭建一个属于自己的博客 | Nyx&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="LSR">
     
-    <meta name="description" content="最近把自己的服务器丢到了办公室，配了新的IP（这种事简直作死），原来在上面的git server当然要继续用下去。。嗯，手上的N个项目怎么办呢。
-很简单，百度可知有三种方法可以迁移git repo.
-
-修改命令
-1git remte origin set-url URL
-
-先删后加 
-12git r">
+    <meta name="description" content="写博客是个好习惯啊，据说是一只程序员走向大师的必经之路。其实我早在高考完就想做这件事情了，只是一直懒懒懒懒到现在……（扶额之前看到Dolphin学长的博客很是眼红，默默照猫画虎起来。。（只是现在学长的博客早就升级了（高不可攀感→_→biu，友情链接&amp;lt;https://idiotwu.me/&amp;gt">
     
     
     
@@ -76,15 +69,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/08/26/Git迁移/" title="Git使用技巧：repositories的迁移" itemprop="url">Git使用技巧：repositories的迁移</a>
+      <a href="/2015/08/26/tutorial-Build-YOUR-Blog/" title="Tutorial: Build YOUR own Blog | 搭建一个属于自己的博客" itemprop="url">Tutorial: Build YOUR own Blog | 搭建一个属于自己的博客</a>
   </h1>
   <p class="article-author">By
     
       <a href="https://nyx2014.github.io" title="LSR">LSR</a>
     </p>
   <p class="article-time">
-    <time datetime="2015-08-25T16:54:29.000Z" itemprop="datePublished">2015-08-26</time>
-    更新日期:<time datetime="2015-08-26T15:28:28.000Z" itemprop="dateModified">2015-08-26</time>
+    <time datetime="2015-08-26T14:44:53.000Z" itemprop="datePublished">2015-08-26</time>
+    更新日期:<time datetime="2015-08-26T15:49:13.000Z" itemprop="dateModified">2015-08-26</time>
     
   </p>
 </header>
@@ -93,43 +86,43 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tutorial:_Build_YOUR_own_Blog"><span class="toc-number">1.</span> <span class="toc-text">Tutorial: Build YOUR own Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites:"><span class="toc-number">1.1.</span> <span class="toc-text">Prerequisites:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown_Language_Tutorial_in_10_minutes-"><span class="toc-number">1.1.1.</span> <span class="toc-text">Markdown Language Tutorial in 10 minutes.</span></a></li></ol></li></ol></li></ol>
 		</div>
 		
-		<p>最近把自己的服务器丢到了办公室，配了新的IP（这种事简直作死），<br>原来在上面的git server当然要继续用下去。。嗯，手上的N个项目怎么办呢。</p>
-<p>很简单，百度可知有三种方法可以迁移git repo.</p>
-<ol>
-<li><p>修改命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remte origin <span class="built_in">set</span>-url URL</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>先删后加 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote rm origin </span><br><span class="line">git remote add origin git@github.com:foo/bar.git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>直接修改config文件<br>git的配置文件位于<code>/.git/config</code>，用notepad++修改即可</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[remote &#34;origin&#34;]&#10;&#9;url = http://username@github.com:port/path/to/foobar.git&#10;&#9;fetch = +refs/heads/*:refs/remotes/origin/*</span><br></pre></td></tr></table></figure>
+		<p>写博客是个好习惯啊，据说是一只程序员走向大师的必经之路。其实我早在高考完就想做这件事情了，<br>只是一直懒懒懒懒到现在……（扶额<br>之前看到Dolphin学长的博客很是眼红，默默照猫画虎起来。。（只是现在学长的博客早就升级了<br>（高不可攀感<br>→_→biu，友情链接<code>&lt;https://idiotwu.me/&gt;</code><br>已经升级为Ghost（我之前也试过但是死活没成功，大坑啊</p>
+<p>嗯，也是在网上看到的教程，前段时间搞过一次不过思路比较混乱（主要是那时不会用Git），<br>这次重新拿出来搞定了<br>keyword：<code>Hexo</code> <code>Pacman</code> <code>Github Blog</code><br>利用Hexo编译成静态的Html之后托管在我大交友网站上:)<br>Free for everyone!</p>
+<p>这篇博文主要是写给学弟学妹们，希望可以在学习的路上少走弯路，学会总结自己的知识。。<br>总有一天，你们要超过我；我还想着以后撸代码的时候有不会的问你们呢！</p>
+<p>正文开始。</p>
+<h1 id="Tutorial:_Build_YOUR_own_Blog">Tutorial: Build YOUR own Blog</h1><h2 id="Prerequisites:">Prerequisites:</h2><ul>
+<li>Markdown Language</li>
+<li>The use of Git</li>
+<li>An account on Github</li>
+</ul>
+<p>写博客呢，(●’◡’●)<br>当然是要用我们高大上有装逼范儿的Markdown语法了，（打死word党，逃<br>这玩意简单实在，来，我教你十分钟入门:)</p>
+<h3 id="Markdown_Language_Tutorial_in_10_minutes-">Markdown Language Tutorial in 10 minutes.</h3><ol>
+<li><p><em>占坑，滚去睡觉了，明天更</em></p>
 </li>
 </ol>
-<p>ok，搞定，愉快地撸代码去啦</p>
   
 	</div>
 		<footer class="article-footer clearfix">
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/git/">git</a>
+  <span></span> <a href="/tags/Blog/">Blog</a><a href="/tags/Git/">Git</a><a href="/tags/Github/">Github</a><a href="/tags/Hexo/">Hexo</a><a href="/tags/Markdown/">Markdown</a>
   </div>
 
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/技巧/">技巧</a>
+  <a class="article-category-link" href="/categories/教程/">教程</a>
 </div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="https://nyx2014.github.io/2015/08/26/Git迁移/" data-title="Git使用技巧：repositories的迁移 | Nyx&#39;s Blog" data-tsina="undefined" class="share clearfix">
+  <div data-url="https://nyx2014.github.io/2015/08/26/tutorial-Build-YOUR-Blog/" data-title="Tutorial: Build YOUR own Blog | 搭建一个属于自己的博客 | Nyx&#39;s Blog" data-tsina="undefined" class="share clearfix">
   </div>
 
 </div>
@@ -139,13 +132,21 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2015/08/26/idea-Custom-File-System/" title="idea: Custom File System">
+ <a href="/2015/08/26/knowledge-Comparison-of-five-open-source-protocols/" title="Knowledge: Comparison of five open source protocols | 五种开源协议的比较">
   <strong>PREVIOUS:</strong><br/>
   <span>
-  idea: Custom File System</span>
+  Knowledge: Comparison of five open source protocols | 五种开源协议的比较</span>
 </a>
 </div>
 
+
+<div class="next">
+<a href="/2015/08/26/idea-Custom-File-System/"  title="idea: Custom File System">
+ <strong>NEXT:</strong><br/> 
+ <span>idea: Custom File System
+</span>
+</a>
+</div>
 
 </nav>
 
@@ -159,7 +160,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tutorial:_Build_YOUR_own_Blog"><span class="toc-number">1.</span> <span class="toc-text">Tutorial: Build YOUR own Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites:"><span class="toc-number">1.1.</span> <span class="toc-text">Prerequisites:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown_Language_Tutorial_in_10_minutes-"><span class="toc-number">1.1.1.</span> <span class="toc-text">Markdown Language Tutorial in 10 minutes.</span></a></li></ol></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
