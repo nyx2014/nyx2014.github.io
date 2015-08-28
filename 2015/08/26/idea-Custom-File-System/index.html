@@ -82,7 +82,7 @@ Flex Storage File System：将存储空间按优劣分级，内存缓存、SSD�
     </p>
   <p class="article-time">
     <time datetime="2015-08-26T14:43:31.000Z" itemprop="datePublished">2015-08-26</time>
-    更新日期:<time datetime="2015-08-27T07:55:27.000Z" itemprop="dateModified">2015-08-27</time>
+    更新日期:<time datetime="2015-08-28T16:28:25.000Z" itemprop="dateModified">2015-08-29</time>
     
   </p>
 </header>
@@ -102,6 +102,23 @@ Flex Storage File System：将存储空间按优劣分级，内存缓存、SSD�
 <p>内容有标记为“当需要空间时首先被释放”的标签，还有“需要为性能优化的数据”，还有“归档性数据”，还有“需要连续存储的数据”，<br>并为各种专一数据类型建立索引，自动命名（智能命名），树状、图状索引查看，程序和数据可耦合共用。跨驱动器、文件系统级别的存储。</p>
 <p>结合网盘、NAS，做自动的高可用性、备份和同步</p>
 <p>比如划分了50G空间，剩余30G空闲，<br>那么会根据空闲空间的性质，并在用户标记网络为闲置并未在按流量计费的网络连接中时自动填充缓冲预取内容，<br>不容一点浪费，并在需要请求内容时首先访问此加速区。</p>
+<p>查资料的时候，一开始我往windows驱动的方面查去了，<br>还有DDK的东西，<br>《windows 7 设备驱动程序开发》这种专业级别的。。。</p>
+<p>还费了很多劲，在CSDN上下了个“虚拟磁盘源码.7z”。。。</p>
+<p>嗯，有个叫<code>subst</code>的小东东不错<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$subst</span> /?</span><br><span class="line">将路径与驱动器号关联。</span><br><span class="line"></span><br><span class="line">SUBST [drive1: [drive2:]path]</span><br><span class="line">SUBST drive1: /D</span><br><span class="line"></span><br><span class="line">  drive1:        指定要分配路径的虚拟驱动器。</span><br><span class="line">  [drive2:]path  指定物理驱动器和要分配给虚拟驱动器的路径。</span><br><span class="line">  /D             删除被替换的</span><br><span class="line">(虚拟)驱动器。</span><br><span class="line"></span><br><span class="line">不带参数键入 SUBST，以显示当前虚拟驱动器的列表。</span><br></pre></td></tr></table></figure></p>
+<p>不过这个玩意。。。嗯。。。</p>
+<p>后来又看到了VFS，Linux下的虚拟文件系统，但是可惜，这货是linux的。。。</p>
+<p>最后找到了它：<code>Dokan</code>，windows下用户态的文件系统驱动库，太开心了</p>
+<p><a href="https://dokan-dev.github.io/" target="_blank" rel="external">https://dokan-dev.github.io/</a></p>
+<blockquote>
+<p>User Mode File System</p>
+<p>Dokan is an user mode file system for Windows.<br>It allows anyone to develop safely and easily a new file system on Windows operating systems. </p>
+</blockquote>
+<p>我们来看一下Dokan官网上的介绍：</p>
+<blockquote>
+<p>What is Dokan</p>
+<p>When you want to create a new file system on Windows, other than FAT or NTFS, you need to develop a file system driver. Developing a device driver that works in kernel mode on windows is extremely technical. By using Dokan, you can create your own file systems very easily without writing device drivers. Dokan is similar to FUSE (Linux file system in user space) but works on Windows.</p>
+</blockquote>
+<p>也就是说，这货是仿<code>FUSE</code>的，看人家Linux那一套眼馋，搬过来了。<br>当你想发明一个伟大的文件系统的时候，又不想麻烦写难度五颗星的内核态驱动（<code>kernel mode</code>）<br>那么就用Dokan库吧！<br>excited！</p>
   
 	</div>
 		<footer class="article-footer clearfix">

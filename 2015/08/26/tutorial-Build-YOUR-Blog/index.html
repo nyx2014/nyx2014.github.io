@@ -78,7 +78,7 @@
     </p>
   <p class="article-time">
     <time datetime="2015-08-26T14:44:53.000Z" itemprop="datePublished">2015-08-26</time>
-    更新日期:<time datetime="2015-08-27T08:24:21.000Z" itemprop="dateModified">2015-08-27</time>
+    更新日期:<time datetime="2015-08-28T16:29:01.000Z" itemprop="dateModified">2015-08-29</time>
     
   </p>
 </header>
@@ -87,7 +87,7 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tutorial:_Build_YOUR_own_Blog"><span class="toc-number">1.</span> <span class="toc-text">Tutorial: Build YOUR own Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites:"><span class="toc-number">1.1.</span> <span class="toc-text">Prerequisites:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown_Language_Tutorial_in_10_minutes-"><span class="toc-number">1.1.1.</span> <span class="toc-text">Markdown Language Tutorial in 10 minutes.</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Get_Started"><span class="toc-number">1.2.</span> <span class="toc-text">Get Started</span></a></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Tutorial:_Build_YOUR_own_Blog"><span class="toc-number">1.</span> <span class="toc-text">Tutorial: Build YOUR own Blog</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites:"><span class="toc-number">2.</span> <span class="toc-text">Prerequisites:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown_Language_Tutorial_in_10_minutes-"><span class="toc-number">2.1.</span> <span class="toc-text">Markdown Language Tutorial in 10 minutes.</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Get_Started"><span class="toc-number">3.</span> <span class="toc-text">Get Started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#装个Nodejs"><span class="toc-number">3.1.</span> <span class="toc-text">装个Nodejs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装hexo"><span class="toc-number">3.2.</span> <span class="toc-text">安装hexo</span></a></li></ol></li></ol>
 		</div>
 		
 		<p>写博客是个好习惯啊，据说是一只程序员走向大师的必经之路。<br>其实我早在高考完就想做这件事情了，<br>只是一直懒懒懒懒到现在……（扶额</p>
@@ -95,7 +95,7 @@
 <p>嗯，也是在网上看到的教程，前段时间搞过一次不过思路比较混乱（主要是那时不会用Git），<br>这次重新拿出来搞定了<br>keyword：<code>Hexo</code> <code>Pacman</code> <code>Github Blog</code><br>利用Hexo编译成静态的Html之后托管在我大交友网站上 :)<br>Free for everyone !</p>
 <p>这篇博文主要是写给学弟学妹们，希望可以在学习的路上少走弯路，学会总结自己的知识。。<br>总有一天，你们要超过我；我还想着以后撸代码的时候有不会的问你们呢！</p>
 <p>正文开始。</p>
-<h1 id="Tutorial:_Build_YOUR_own_Blog">Tutorial: Build YOUR own Blog</h1><h2 id="Prerequisites:">Prerequisites:</h2><ul>
+<h2 id="Tutorial:_Build_YOUR_own_Blog">Tutorial: Build YOUR own Blog</h2><h2 id="Prerequisites:">Prerequisites:</h2><ul>
 <li>Markdown Language</li>
 <li>The use of Git</li>
 <li>An account on Github</li>
@@ -117,7 +117,11 @@
 </li>
 <li><p>插图片<br> so easy:<br> <code>![text](http://link/to/foobar.png)</code><br> 效果：<img src="1.png" alt=""></p>
 </li>
-<li><p>超链接<br> easy too:<br> <code>[text](http://link)</code><br> <code>&lt;http://example.com/&gt;</code></p>
+<li><p>超链接<br> easy too:  </p>
+<ul>
+<li><code>[nyx&#39;s blog](https://nyx2014.github.io/)</code><br>效果：<a href="https://nyx2014.github.io/" target="_blank" rel="external">nyx’s blog</a></li>
+<li><code>&lt;https://nyx2014.github.io/&gt;</code><br>效果：<a href="https://nyx2014.github.io/" target="_blank" rel="external">https://nyx2014.github.io/</a></li>
+</ul>
 </li>
 <li><p>插代码<br> 嗯，markdown这货是可以直接吃html代码的，所以在markdown里面，<br> 你可以把你炼了N久的炫酷css丢进来，这完全木有问题</p>
 <p> 然而，我们只想安安静静地插个代码</p>
@@ -134,13 +138,29 @@
 </ol>
 </li>
 </ol>
-<h2 id="Get_Started">Get Started</h2><p>装个Nodejs</p>
-<p>然后<code>npm install hexo -g</code></p>
+<h2 id="Get_Started">Get Started</h2><h3 id="装个Nodejs">装个<code>Nodejs</code></h3><blockquote>
+<p>官网：<a href="https://nodejs.org/" target="_blank" rel="external">https://nodejs.org/</a></p>
+</blockquote>
+<p>—&gt;<a href="https://nodejs.org/dist/v0.12.7/x64/node-v0.12.7-x64.msi" target="_blank" rel="external">安装包</a>&lt;—</p>
+<h3 id="安装hexo">安装hexo</h3><blockquote>
+<p>Hexo官网：<a href="https://hexo.io/" target="_blank" rel="external">https://hexo.io/</a></p>
+</blockquote>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">$npm</span> install hexo-<span class="keyword">cli</span> -<span class="keyword">g</span> &lt;-全局安装hexo</span><br><span class="line"><span class="label">$cd</span> balabala             &lt;-进入你想放博客的地方</span><br><span class="line"><span class="label">$hexo</span> init blog          &lt;-初始化，blog就是博客文件夹名</span><br><span class="line"><span class="label">$cd</span> blog                 &lt;-进去</span><br><span class="line"><span class="label">$npm</span> install             &lt;-下载所需文件</span><br><span class="line"><span class="label">$hexo</span> server             &lt;-启动本地服务器，然后就可以在浏览器里预览效果了</span><br></pre></td></tr></table></figure>
+<p>Hexo常用命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$hexo</span> new <span class="string">"name"</span> &lt;- 新写一篇博文，标题为name</span><br><span class="line"><span class="variable">$hexo</span> g       &lt;- g-&gt;generate 编译你的博客，也就是把你写的md变成正式的html</span><br><span class="line"><span class="variable">$hexo</span> s       &lt;- s-&gt;server   启动本地服务器，可以预览效果</span><br><span class="line"><span class="variable">$hexo</span> clean   &lt;- 从头再来，清空所有html，但是你写的md都还在，放心</span><br><span class="line"><span class="variable">$hexo</span> deploy  &lt;- 部署，也就是同步到Github上面去，正式地让大家看到</span><br></pre></td></tr></table></figure></p>
 <p>去下个<code>Hexo</code>的主题，比如：<code>Light</code></p>
-<p>去注册个Github的账号，<br>然后创建一个与你账号<strong>同名</strong>的repo</p>
+<blockquote>
+<p><a href="https://github.com/" target="_blank" rel="external">https://github.com/</a></p>
+</blockquote>
+<p>然后<br>—&gt;<a href="https://github.com/join" target="_blank" rel="external">注册Github</a>&lt;—</p>
+<p>然后创建一个与你账号<strong>同名</strong>的repo</p>
+<blockquote>
+<p>个人主页</p>
+<p>每个帐号只能有一个仓库来存放个人主页，而且仓库的名字必须是username/username.github.io，这是特殊的命名约定。你可以通过<a href="http://username.github.io来访问你的个人主页。" target="_blank" rel="external">http://username.github.io来访问你的个人主页。</a></p>
+<p>通过向导很容易创建一个仓库，并测试成功。不过，同样的，没有博客的结构。需要注意的个人主页的网站内容是在master分支下的。</p>
+</blockquote>
 <p>配置一下Hexo</p>
 <p>Done.</p>
-<p><em>占坑，滚去睡觉了，明天更</em></p>
+<p><em>每次总是感觉快要写完了，但是总是一堆细节，泪：（</em></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -198,7 +218,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tutorial:_Build_YOUR_own_Blog"><span class="toc-number">1.</span> <span class="toc-text">Tutorial: Build YOUR own Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites:"><span class="toc-number">1.1.</span> <span class="toc-text">Prerequisites:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown_Language_Tutorial_in_10_minutes-"><span class="toc-number">1.1.1.</span> <span class="toc-text">Markdown Language Tutorial in 10 minutes.</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Get_Started"><span class="toc-number">1.2.</span> <span class="toc-text">Get Started</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Tutorial:_Build_YOUR_own_Blog"><span class="toc-number">1.</span> <span class="toc-text">Tutorial: Build YOUR own Blog</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites:"><span class="toc-number">2.</span> <span class="toc-text">Prerequisites:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown_Language_Tutorial_in_10_minutes-"><span class="toc-number">2.1.</span> <span class="toc-text">Markdown Language Tutorial in 10 minutes.</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Get_Started"><span class="toc-number">3.</span> <span class="toc-text">Get Started</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#装个Nodejs"><span class="toc-number">3.1.</span> <span class="toc-text">装个Nodejs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装hexo"><span class="toc-number">3.2.</span> <span class="toc-text">安装hexo</span></a></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
