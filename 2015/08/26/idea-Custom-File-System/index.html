@@ -82,7 +82,7 @@ Flex Storage File System：将存储空间按优劣分级，内存、SSD、HDD�
     </p>
   <p class="article-time">
     <time datetime="2015-08-26T14:43:31.000Z" itemprop="datePublished">2015-08-26</time>
-    更新日期:<time datetime="2015-08-29T09:30:15.000Z" itemprop="dateModified">2015-08-29</time>
+    更新日期:<time datetime="2015-08-29T17:00:18.000Z" itemprop="dateModified">2015-08-30</time>
     
   </p>
 </header>
@@ -91,7 +91,7 @@ Flex Storage File System：将存储空间按优劣分级，内存、SSD、HDD�
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-29更"><span class="toc-number">1.</span> <span class="toc-text">8.29更</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-29更"><span class="toc-number">1.</span> <span class="toc-text">8.29更</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-30更"><span class="toc-number">2.</span> <span class="toc-text">8.30更</span></a></li></ol>
 		</div>
 		
 		<p>此为大坑。</p>
@@ -125,6 +125,14 @@ Flex Storage File System：将存储空间按优劣分级，内存、SSD、HDD�
 <p>我想的很多功能，不仅仅是一个文件系统驱动就可以搞定的，它一定需要上层应用的配合，<br>再说还考虑到一个标准配置界面是不可或缺的，那么就更导致光凭一个<code>WUDF</code>是无法完全实现的</p>
 <p>这可咋整！是不是要结合这个WSNE来做呢？它和Dokan又是什么关系，能不能协同工作呢？<br>嗯，不过他俩倒是都在.NET下面，都用C#搞定</p>
 <p>欲知后事如何，且等我更新。。</p>
+<h3 id="8-30更">8.30更</h3><p>哎，醉了，今天搞代码把机子蓝屏了<br>提醒大家，玩驱动的时候，有条件的一定要在虚机里面走，<br>不然怎么死的都不知道<br>幸亏我的IE开了自动恢复，几十个标签页又回来了(●’◡’●)</p>
+<p>找了一个WSNE的demo，居然是个C#和C++的混合体，<br>有个地方是EventHandler响应UI触发事件的，然而那个关键的Handle在哪里啊。。<br>死活没找到，输了输了</p>
+<p>在Explorer里修修改改应该是可以的，<br>但是我想到一个小问题就是如何只在我特定的<code>FlexStorage</code>卷上面来自定义ContextMenu呢</p>
+<p>我又想到，记得QQ电脑管家可以提供一个功能就是插上U盘的时候在资源管理器里面显示一个侧边栏，很方便的样子<br>嗯，我至少也要做到它那个样子吧？</p>
+<p>Dokan的那个Demo居然有bug，Debug模式下会崩，居然用了Release才过的，很神奇，<br>也不明白是为什么</p>
+<p>我还闲着试着给废柴FlexStorage加GUI，<br>用WPF，做都做好了，结果呵呵哒了，<br>真是不知道为什么。而且崩的地方是vhost，我还没法调试</p>
+<p>好吧，暂时默默去学C#文件操作了。。</p>
+<p>让我修炼一百年再战</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -182,7 +190,7 @@ Flex Storage File System：将存储空间按优劣分级，内存、SSD、HDD�
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-29更"><span class="toc-number">1.</span> <span class="toc-text">8.29更</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-29更"><span class="toc-number">1.</span> <span class="toc-text">8.29更</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-30更"><span class="toc-number">2.</span> <span class="toc-text">8.30更</span></a></li></ol>
   </div>
 
 <div id="asidepart">
