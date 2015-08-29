@@ -13,8 +13,8 @@
 
 This idea under GPL Liscence.
 
-Flex Storage File System：将存储空间按优劣分级，内存缓存、SSD、HDD，按传输速率和存储特性。甚至闪存。
-内容有标记为“当需要空间时首先被释放”的标签，还有“需要为性能优化的数据”，还有“归档性数据">
+Flex Storage File System：将存储空间按优劣分级，内存、SSD、HDD，甚至网盘、闪存。按传输速率和存储特性。总之就是可以智能管理你的一切存储空间。
+内容有标记为“当需要空间时首先被释放”的标签，还有“">
     
     
     
@@ -82,7 +82,7 @@ Flex Storage File System：将存储空间按优劣分级，内存缓存、SSD�
     </p>
   <p class="article-time">
     <time datetime="2015-08-26T14:43:31.000Z" itemprop="datePublished">2015-08-26</time>
-    更新日期:<time datetime="2015-08-28T16:28:25.000Z" itemprop="dateModified">2015-08-29</time>
+    更新日期:<time datetime="2015-08-29T09:30:15.000Z" itemprop="dateModified">2015-08-29</time>
     
   </p>
 </header>
@@ -91,14 +91,14 @@ Flex Storage File System：将存储空间按优劣分级，内存缓存、SSD�
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		
+		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-29更"><span class="toc-number">1.</span> <span class="toc-text">8.29更</span></a></li></ol>
 		</div>
 		
 		<p>此为大坑。</p>
 <blockquote>
 <p>This idea under GPL Liscence.</p>
 </blockquote>
-<p><code>Flex Storage File System</code>：将存储空间按优劣分级，<br>内存缓存、SSD、HDD，按传输速率和存储特性。甚至闪存。</p>
+<p><code>Flex Storage File System</code>：将存储空间按优劣分级，<br>内存、SSD、HDD，甚至网盘、闪存。按传输速率和存储特性。<br>总之就是可以智能管理你的一切存储空间。</p>
 <p>内容有标记为“当需要空间时首先被释放”的标签，还有“需要为性能优化的数据”，还有“归档性数据”，还有“需要连续存储的数据”，<br>并为各种专一数据类型建立索引，自动命名（智能命名），树状、图状索引查看，程序和数据可耦合共用。跨驱动器、文件系统级别的存储。</p>
 <p>结合网盘、NAS，做自动的高可用性、备份和同步</p>
 <p>比如划分了50G空间，剩余30G空闲，<br>那么会根据空闲空间的性质，并在用户标记网络为闲置并未在按流量计费的网络连接中时自动填充缓冲预取内容，<br>不容一点浪费，并在需要请求内容时首先访问此加速区。</p>
@@ -119,6 +119,12 @@ Flex Storage File System：将存储空间按优劣分级，内存缓存、SSD�
 <p>When you want to create a new file system on Windows, other than FAT or NTFS, you need to develop a file system driver. Developing a device driver that works in kernel mode on windows is extremely technical. By using Dokan, you can create your own file systems very easily without writing device drivers. Dokan is similar to FUSE (Linux file system in user space) but works on Windows.</p>
 </blockquote>
 <p>也就是说，这货是仿<code>FUSE</code>的，看人家Linux那一套眼馋，搬过来了。<br>当你想发明一个伟大的文件系统的时候，又不想麻烦写难度五颗星的内核态驱动（<code>kernel mode</code>）<br>那么就用Dokan库吧！<br>excited！</p>
+<h3 id="8-29更">8.29更</h3><p>泪奔。。</p>
+<p>在网上看到这个东东：<code>Windows Shell Namespace Extension</code>，一开始还没当回事，<br>不过仔细看完介绍之后，我开始动摇了</p>
+<p>其实对于这样的文件系统驱动，网上有很多实现方案的，在Dokan的介绍里面就说，Dokan不是万能的，如果你想要balabala，<br>那么你可以参考这些方案balabala。<br>对，其中就有这个Windows Shell Namespace Extension，翻译过来就是windows界面里的插件，<br>可以直接给右键菜单添菜，甚至直接在窗口里划一块View出来。。<br>是不是够diao！</p>
+<p>我想的很多功能，不仅仅是一个文件系统驱动就可以搞定的，它一定需要上层应用的配合，<br>再说还考虑到一个标准配置界面是不可或缺的，那么就更导致光凭一个<code>WUDF</code>是无法完全实现的</p>
+<p>这可咋整！是不是要结合这个WSNE来做呢？它和Dokan又是什么关系，能不能协同工作呢？<br>嗯，不过他俩倒是都在.NET下面，都用C#搞定</p>
+<p>欲知后事如何，且等我更新。。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -176,7 +182,7 @@ Flex Storage File System：将存储空间按优劣分级，内存缓存、SSD�
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-29更"><span class="toc-number">1.</span> <span class="toc-text">8.29更</span></a></li></ol>
   </div>
 
 <div id="asidepart">
