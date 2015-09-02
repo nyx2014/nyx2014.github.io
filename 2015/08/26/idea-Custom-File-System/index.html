@@ -11,10 +11,10 @@
     
     <meta name="description" content="此为大坑。
 
-This idea under GPL Liscence.
+This idea under GPL License.
 
 Flex Storage File System：将存储空间按优劣分级，内存、SSD、HDD，甚至网盘、闪存。按传输速率和存储特性。总之就是可以智能管理你的一切存储空间。
-内容有标记为“当需要空间时首先被释放”的标签，还有“">
+内容有标记为“当需要空间时首先被释放”的标签，还有“需">
     
     
     
@@ -82,7 +82,7 @@ Flex Storage File System：将存储空间按优劣分级，内存、SSD、HDD�
     </p>
   <p class="article-time">
     <time datetime="2015-08-26T14:43:31.000Z" itemprop="datePublished">2015-08-26</time>
-    更新日期:<time datetime="2015-08-29T17:00:18.000Z" itemprop="dateModified">2015-08-30</time>
+    更新日期:<time datetime="2015-09-02T07:28:34.000Z" itemprop="dateModified">2015-09-02</time>
     
   </p>
 </header>
@@ -91,12 +91,12 @@ Flex Storage File System：将存储空间按优劣分级，内存、SSD、HDD�
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-29更"><span class="toc-number">1.</span> <span class="toc-text">8.29更</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-30更"><span class="toc-number">2.</span> <span class="toc-text">8.30更</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-29更"><span class="toc-number">1.</span> <span class="toc-text">8.29更</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-30更"><span class="toc-number">2.</span> <span class="toc-text">8.30更</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1更"><span class="toc-number">3.</span> <span class="toc-text">9.1更</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2更"><span class="toc-number">4.</span> <span class="toc-text">9.2更</span></a></li></ol>
 		</div>
 		
 		<p>此为大坑。</p>
 <blockquote>
-<p>This idea under GPL Liscence.</p>
+<p>This idea under GPL License.</p>
 </blockquote>
 <p><code>Flex Storage File System</code>：将存储空间按优劣分级，<br>内存、SSD、HDD，甚至网盘、闪存。按传输速率和存储特性。<br>总之就是可以智能管理你的一切存储空间。</p>
 <p>内容有标记为“当需要空间时首先被释放”的标签，还有“需要为性能优化的数据”，还有“归档性数据”，还有“需要连续存储的数据”，<br>并为各种专一数据类型建立索引，自动命名（智能命名），树状、图状索引查看，程序和数据可耦合共用。跨驱动器、文件系统级别的存储。</p>
@@ -121,6 +121,9 @@ Flex Storage File System：将存储空间按优劣分级，内存、SSD、HDD�
 <p>也就是说，这货是仿<code>FUSE</code>的，看人家Linux那一套眼馋，搬过来了。<br>当你想发明一个伟大的文件系统的时候，又不想麻烦写难度五颗星的内核态驱动（<code>kernel mode</code>）<br>那么就用Dokan库吧！<br>excited！</p>
 <h3 id="8-29更">8.29更</h3><p>泪奔。。</p>
 <p>在网上看到这个东东：<code>Windows Shell Namespace Extension</code>，一开始还没当回事，<br>不过仔细看完介绍之后，我开始动摇了</p>
+<blockquote>
+<p>Windows Shell namespace（Windows Shell 命名空间）是被 Windows资源管理器 所使用的，<br>向用户呈现文件系统和其他对象的组织系统。<br>在 Windows Shell 命名空间内的对象可以是真正的文件和文件夹,也可以是虚拟的对象，类似于网上邻居和回收站都是“虚拟文件夹”.</p>
+</blockquote>
 <p>其实对于这样的文件系统驱动，网上有很多实现方案的，在Dokan的介绍里面就说，Dokan不是万能的，如果你想要balabala，<br>那么你可以参考这些方案balabala。<br>对，其中就有这个Windows Shell Namespace Extension，翻译过来就是windows界面里的插件，<br>可以直接给右键菜单添菜，甚至直接在窗口里划一块View出来。。<br>是不是够diao！</p>
 <p>我想的很多功能，不仅仅是一个文件系统驱动就可以搞定的，它一定需要上层应用的配合，<br>再说还考虑到一个标准配置界面是不可或缺的，那么就更导致光凭一个<code>WUDF</code>是无法完全实现的</p>
 <p>这可咋整！是不是要结合这个WSNE来做呢？它和Dokan又是什么关系，能不能协同工作呢？<br>嗯，不过他俩倒是都在.NET下面，都用C#搞定</p>
@@ -133,6 +136,15 @@ Flex Storage File System：将存储空间按优劣分级，内存、SSD、HDD�
 <p>我还闲着试着给废柴FlexStorage加GUI，<br>用WPF，做都做好了，结果呵呵哒了，<br>真是不知道为什么。而且崩的地方是vhost，我还没法调试</p>
 <p>好吧，暂时默默去学C#文件操作了。。</p>
 <p>让我修炼一百年再战</p>
+<h3 id="9-1更">9.1更</h3><p>文件系统可以合并显示可用驱动器的内容了，<br>也可以进入每个文件夹看<br>但是还不能打开文件进行各种操作<br>但现在最麻烦的是，我是不是需要自己维护一个表，来索引各种文件呢？<br>不然的话，我每次进入一个目录，都需要去每个驱动器里面寻找一遍。。</p>
+<p>还有一个问题，我这个FusionStorage是建立在已经可用的NTFS卷基础之上的，<br>如果我想只留下我这个文件系统，同时把C盘D盘啊这些给隐藏掉（做成黑箱），<br>该怎么办呢。</p>
+<p>毕竟我这个还没有做到直接去访问磁盘上的内容，只是在借助现有的接口而已，<br>感觉好弱智。</p>
+<h3 id="9-2更">9.2更</h3><p>昨天生病了ToT…</p>
+<p>有个小小的发现，在Windows的磁盘管理中，可以将一个NTFS卷<br><code>装入以下空白NTFS文件夹中</code><br>也就是说，相当于一个链接，直接把卷给mount到一个文件夹里去了。。<br>而且这个功能是和现有的盘符访问不冲突的</p>
+<p>再结合组策略编辑器里的<br>用户配置—管理模板—windows组件—windows资源管理器—“隐藏‘我的电脑’中指定的这些驱动器”<br>这个功能</p>
+<p>最终的效果是，我把C盘和D盘隐藏了起来，并且新建了一个512M的小分区，把C盘和D盘给挂载进去了<br>此时是完全不影响正常使用的，C盘和D盘仍然可以正常访问。</p>
+<p>啊哈哈，然而并没有什么用。</p>
+<p>是否可以结合这个功能来开发我的文件系统呢？<br>比如，把不想让用户看到的卷隐藏掉。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -190,7 +202,7 @@ Flex Storage File System：将存储空间按优劣分级，内存、SSD、HDD�
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-29更"><span class="toc-number">1.</span> <span class="toc-text">8.29更</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-30更"><span class="toc-number">2.</span> <span class="toc-text">8.30更</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-29更"><span class="toc-number">1.</span> <span class="toc-text">8.29更</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-30更"><span class="toc-number">2.</span> <span class="toc-text">8.30更</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1更"><span class="toc-number">3.</span> <span class="toc-text">9.1更</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2更"><span class="toc-number">4.</span> <span class="toc-text">9.2更</span></a></li></ol>
   </div>
 
 <div id="asidepart">
