@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鸭力测试</title>
+  <style>
+
+    .main-title p.title {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px 0 0 0 ;
+    }
+
+    .main-title p {
+      text-align: center;
+    }
+
+    .column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      box-sizing: border-box;
+      padding: 0 40px;
+
+    }
+    .column .title {
+      text-align: center;
+    }
+
+    #canvas-container {
+      width: 100%;
+      height: 100%;
+      border: 1px solid darkgrey;
+    }
+
+  </style>
+</head>
+<body>
+
+
+<div>
+  <div class="main-title">
+    <p class="title">系统信息</p>
+    <p id="auto-start"> （<span id="left-time">5</span>S 后自动开始）</p>
+
+    <div style="padding-left: 40px; padding-bottom: 15px;">
+      <div>
+        <span>CPU逻辑核心数量: </span><span id="field-1"></span>
+      </div>
+      <div>
+        <span>GPU型号: </span><span id="field-2"></span>
+      </div>
+      <div>
+        <span>当前电量: </span><span id="field-3"></span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex;">
+    <div class="column">
+      <p class="title">GPU</p>
+      <div>
+        <span>小球数量：</span>
+        <input id="sphere-count" value="500" />
+        <input type="button" id="start-gpu" class="bottonazzi" value="Start" onclick="StartStop(this)">
+      </div>
+      <div>
+        <span>帧数：</span>
+        <span id="fps"></span>
+      </div>
+      <div>
+        <span>持续时间</span>
+        <span id="runtimer"></span>
+      </div>
+      <div id="canvas-container"></div>
+
+    </div>
+    <div  class="column" style="border-left: 2px solid lightblue; padding-left: 30px;">
+      <p class="title">CPU</p>
+      <div>
+        <input type="button" id="start-cpu" onclick="startCpuTest(this)" value="Start" />
+        <div id="tag-results"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<script src="./gpu-browser.min.js" type="text/javascript"></script>
+<script src="./gpu.js" type="text/javascript"></script>
+<script src="./cpu.js" type="text/javascript"></script>
+
+<script>
+  document.getElementById('field-1').innerText = navigator.hardwareConcurrency
+  // document.getElementById('field-2').innerText = ((gl)=>gl.getParameter(gl.getExtension('WEBGL_debug_renderer_info').UNMASKED_RENDERER_WEBGL))(document.createElement('canvas').getContext('experimental-webgl'))
+  ;(async() => {
+    document.getElementById('field-3').innerText = `${(await navigator.getBattery()).level * 100}%`
+  })()
+</script>
+
+<script>
+
+  if (new URLSearchParams(location.search).has('no-autostart')) {
+    throw new Error('disable auto start')
+  }
+
+  let leftTime = 5;
+
+  const timer = setInterval(() => {
+
+    leftTime --
+    document.getElementById('left-time').innerText = leftTime
+
+    if (leftTime === 0) {
+      clearInterval(timer)
+      document.getElementById('auto-start').innerHTML = ''
+      document.getElementById('start-gpu').click()
+      setTimeout(()=> {
+        document.getElementById('start-cpu').click()
+      }, 5000)
+    }
+
+  }, 1000)
+
+</script>
+
+<script>
+  navigator.getBattery().then((battery) => {
+
+    battery.addEventListener("levelchange", async () => {
+      document.getElementById('field-3').innerText = `${(await navigator.getBattery()).level * 100}%`
+    });
+  })
+</script>
+
+
+</body>
+</html>
